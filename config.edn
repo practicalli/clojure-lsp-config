@@ -69,7 +69,7 @@
 
   {:name "require-rdd"
    :detail "require RDD"
-   :insert-text "(require '[${1:namespace} :as ${0:alias}])"}
+   :snippet "(require '[${1:namespace} :as ${0:alias}])"}
 
   {:name "require"
    :detail "require as"
