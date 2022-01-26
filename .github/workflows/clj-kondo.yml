@@ -1,5 +1,7 @@
 name: "clj-kondo lint"
+
 on:
+  workflow_dispatch:
   pull_request:
     paths:
       - 'config.edn'
