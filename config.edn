@@ -67,6 +67,36 @@
    :detail "Create ns"
    :snippet "(ns ${1:name}\n  \"${2:docstring}\"\n  ${0:references})"}
 
+  {:name "deps-maven"
+   :detail "deps.edn Maven dependency"
+   :snippet
+   "${1:domain/library-name} {:mvn/version \"${2:1.0.0}\"}$0"}
+
+  {:name "deps-git"
+   :detail "deps.edn Git dependency"
+   :snippet
+   "${1:domain/library-name}
+       {:git/sha \"${2:git-sha-value}\"}$0"}
+
+  {:name "deps-git"
+   :detail "deps.edn Git dependency"
+   :snippet
+   "${1:domain/library-name}
+      {:git/tag \"${2:git-tag-value}\"
+       :git/sha \"${3:git-sha-value}\"}$0"}
+
+  {:name "deps-url"
+   :detail "deps.edn Git URL dependency"
+   :snippet
+   "${1:domain/library-name}
+      {:git/url \"https://github.com/${1:}\"
+       :git/sha \"${2:git-sha-value}\"}$0"}
+
+  {:name "deps-local"
+   :detail "deps.edn Maven dependency"
+   :snippet
+   "${1:domain/library-name} {:local/root \"${2:/path/to/project/root}\"}$0"}
+
   {:name "require-rdd"
    :detail "require RDD"
    :snippet "(require '[${1:namespace} :as ${0:alias}])"}
