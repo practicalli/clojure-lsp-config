@@ -4,7 +4,7 @@ Custom snippets in Clojure LSP format (EDN).  Practicalli designed snippets to e
 
 ## Install
 
-Clone the repository to the user level configuration location for Clojure LSP, either `$XDG_CONFIG_HOME/clojure-lsp` or if not set, `$HOME/.clojure-lsp`
+Clone the repository to the user level configuration location for Clojure LSP, either `$XDG_CONFIG_HOME/clojure-lsp` or if not set, `$HOME/.lsp`
 
 
 ## Custom snippets
