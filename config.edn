@@ -85,7 +85,7 @@
       {:git/tag \"${2:git-tag-value}\"
        :git/sha \"${3:git-sha-value}\"}$0"}
 
-  {:name "deps-url"
+  {:name "deps-git-url"
    :detail "deps.edn Git URL dependency"
    :snippet
    "${1:domain/library-name}
