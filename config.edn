@@ -17,13 +17,11 @@
    ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     ;; ${1:Namespace summary title}
     ;;
-    ;; ${2:Brief description}
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n$0"}
+    ;; ${2:Brief description}\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n$0"}
   {:name "comment-separator"
    :detail "Comment Separator"
    :snippet
-   ";; ${1:Namespace summary title}
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n$0"}
+   ";; ${1:Namespace summary title}\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n$0"}
   {:name "rich-comment"
    :detail "Create rich comment"
    :snippet
@@ -78,18 +76,18 @@
    "${1:domain/library-name}
        {:git/sha \"${2:git-sha-value}\"}$0"}
 
-  {:name "deps-git"
-   :detail "deps.edn Git dependency"
+  {:name "deps-git-tag"
+   :detail "Git dependency"
    :snippet
    "${1:domain/library-name}
       {:git/tag \"${2:git-tag-value}\"
        :git/sha \"${3:git-sha-value}\"}$0"}
 
   {:name "deps-git-url"
-   :detail "deps.edn Git URL dependency"
+   :detail "Git URL dependency"
    :snippet
    "${1:domain/library-name}
-      {:git/url \"https://github.com/${1:}\"
+      {:git/url \"https://github.com/$1:\"
        :git/sha \"${2:git-sha-value}\"}$0"}
 
   {:name "deps-local"
@@ -104,15 +102,15 @@
   {:name "require"
    :detail "require as"
    :snippet "(:require [${1:namespace} :refer [$0]])"}
+
   {:name "use"
    :detail "require as"
    :snippet "(:require [${1:namespace} :refer [$0]])"}
 
-  ;; Clojure.test
   {:name "deftest"
    :detail "deftest clojure.test"
    :snippet
    "(deftest ${1:name}-test
       (testing \"${2:Context of the test assertions}\"
-        (is (= ${3:assertion-values}))$4))\n $0"}]  ;; End of snippets
+        (is (= ${3:assertion-values}))$4)) $0"}]
  }
