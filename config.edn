@@ -65,6 +65,13 @@
    :detail "Create ns"
    :snippet "(ns ${1:name}\n  \"${2:docstring}\"\n  ${0:references})"}
 
+  {:name "deps-alias"
+   :detail "deps.edn alias with extra path & deps"
+   :snippet
+   ":${1:category/name}
+    {:extra-paths [\"${2:path}\"]
+     :extra-deps {${3:deps-maven or deps-git}}}$0"}
+
   {:name "deps-maven"
    :detail "deps.edn Maven dependency"
    :snippet
