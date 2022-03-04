@@ -107,16 +107,24 @@
    "${1:domain/library-name} {:local/root \"${2:/path/to/project/root}\"}$0"}
 
   {:name "require-rdd"
-   :detail "require RDD"
-   :snippet "(require '[${1:namespace} :as ${0:alias}])"}
+   :detail "require for rich comment experiments"
+   :snippet "(require '[${1:namespace} :as ${2:alias}]$3)$0"}
 
   {:name "require"
-   :detail "require as"
-   :snippet "(:require [${1:namespace} :refer [$0]])"}
+   :detail "ns require"
+   :snippet "(:require [${1:namespace}])$0"}
+
+  {:name "require-refer"
+   :detail "ns require with :refer"
+   :snippet "(:require [${1:namespace} :refer [$2]]$3)$0"}
+
+  {:name "require-as"
+   :detail "ns require with :as alias"
+   :snippet "(:require [${1:namespace} :as ${2:alias}]$3)$0"}
 
   {:name "use"
-   :detail "require as"
-   :snippet "(:require [${1:namespace} :refer [$0]])"}
+   :detail "require refer preferred over use"
+   :snippet "(:require [${1:namespace} :refer [$2]])$0"}
 
   {:name "deftest"
    :detail "deftest clojure.test"
