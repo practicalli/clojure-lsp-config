@@ -8,6 +8,8 @@
  ;; Use meta data when defining private functions
  :use-metadata-for-privacy? true
 
+ ;; Snippets with $current-form only work when used in front of a form
+ ;; otherwise the snippet will not appear in the auto-complete drop-down
  ;; Custom Snippets
  :additional-snippets
  [;; Documentation
