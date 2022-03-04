@@ -26,14 +26,14 @@
    :detail "Create rich comment"
    :snippet
    "(comment
-    ${0:body}
+      $0
   #_()) ;; End of rich comment"}
   {:name "rich-comment-rdd"
    :detail "Create comment block"
    :snippet
    "#_{:clj-kondo/ignore [:redefined-var]}
    (comment
-     ${0:body}
+     $0
    #_()) ;; End of rich comment"}
   {:name "rich-comment-hotload"
    :detail "Rich comment library hotload"
