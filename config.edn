@@ -20,10 +20,12 @@
     ;; ${1:Namespace summary title}
     ;;
     ;; ${2:Brief description}\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n$0"}
+
   {:name "comment-separator"
    :detail "Comment Separator"
    :snippet
    ";; ${1:Namespace summary title}\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n$0"}
+
   {:name "rich-comment"
    :detail "Create rich comment"
    :snippet
@@ -131,5 +133,6 @@
    :snippet
    "(deftest ${1:name}-test
       (testing \"${2:Context of the test assertions}\"
-        (is (= ${3:assertion-values}))$4)) $0"}]
- }
+        (is (= ${3:assertion-values}))$4)) $0"}
+
+  #_{}]}
