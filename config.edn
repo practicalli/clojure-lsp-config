@@ -98,7 +98,7 @@
    :detail "Git URL dependency"
    :snippet
    "${1:domain/library-name}
-      {:git/url \"https://github.com/$1:\"
+      {:git/url \"https://github.com/$1\"
        :git/sha \"${2:git-sha-value}\"}$0"}
 
   {:name "deps-local"
