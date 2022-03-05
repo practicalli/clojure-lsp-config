@@ -32,6 +32,7 @@
    "(comment
       $0
   #_()) ;; End of rich comment"}
+
   {:name "rich-comment-rdd"
    :detail "Create comment block"
    :snippet
@@ -39,6 +40,7 @@
    (comment
      $0
    #_()) ;; End of rich comment"}
+
   {:name "rich-comment-hotload"
    :detail "Rich comment library hotload"
    :snippet
@@ -48,12 +50,12 @@
       (require '[clojure.tools.deps.alpha.repl :refer [add-libs]])
       (add-libs '{${1:domain/library-name} {:mvn/version \"${2:1.0.0}\"}$3})
       $0
-    ) ;; End of rich comment block"}
+    #_()) ;; End of rich comment block"}
 
   ;; Core functions
   {:name "def"
    :detail "def with docstring"
-   :snippet "(def ${1:name}\n  \"${2:docstring}\"\n  $0)"}
+   :snippet "(def ${1:name}\n  \"${2:doc-string}\"\n  $0)"}
 
   {:name "def-"
    :detail "def private"
@@ -61,7 +63,7 @@
 
   {:name "defn"
    :detail "Create public function"
-   :snippet "(defn ${1:name}\n  \"${2:docstring}\"\n   [${3:args}]\n  $0)"}
+   :snippet "(defn ${1:name}\n  \"${2:doc-string}\"\n   [${3:args}]\n  $0)"}
 
   {:name "defn-"
    :detail "Create public function"
@@ -69,7 +71,7 @@
 
   {:name "ns"
    :detail "Create ns"
-   :snippet "(ns ${1:name}\n  \"${2:docstring}\"\n  ${3:references})"}
+   :snippet "(ns ${1:name}\n  \"${2:doc-string}\"\n  ${3:require})"}
 
   {:name "deps-alias"
    :detail "deps.edn alias with extra path & deps"
@@ -127,6 +129,8 @@
   {:name "use"
    :detail "require refer preferred over use"
    :snippet "(:require [${1:namespace} :refer [$2]])$0"}
+
+  ;; Unit Test snippets
 
   {:name "deftest"
    :detail "deftest clojure.test"
