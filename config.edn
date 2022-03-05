@@ -139,4 +139,8 @@
       (testing \"${2:Context of the test assertions}\"
         (is (= ${3:assertion-values}))$4)) $0"}
 
-  #_{}]}
+  {:name "testing"
+   :detail "testing asserting group for clojure.test"
+   :snippet "(testing \"${1:description-of-assertion-group}\"\n $0)"}
+
+  #_()]}
