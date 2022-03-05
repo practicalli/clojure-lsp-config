@@ -11,19 +11,37 @@ Clone the repository to the user level configuration location for Clojure LSP, e
 
 [Snippets created by Practicalli](https://practical.li/spacemacs/snippets/clojure-lsp/practicalli-snippets.html) are documents in [Practicalli Spacemacs](https://practical.li/spacemacs/snippets/clojure-lsp/practicalli-snippets.html)
 
-| Snippet                | Description                                               |
-|------------------------|-----------------------------------------------------------|
-| `comment-heading`      | Heading describing the namespace using line comments      |
-| `comment-separator`    | Logical separator for a namespace using line comments     |
-| `def`                  | `def` with doc-string                                     |
-| `def-`                 | `def ^:private` with doc-string                           |
-| `defm`                 | `defn` with doc-string                                    |
-| `defn-`                | `defn ^:private` with doc-string                          |
-| `ns`                   | `ns` with doc-string                                      |
-| `require`              | `require` directive with `:as` alias (within ns form)     |
-| `require-rdd`          | `require` expression with `:as` alias (self-contained)    |
-| `rich-comment`         | Rich comment using `comment` function                     |
-| `rich-comment-rdd`     | Rich comment with clj-kondo ignore refined-var            |
-| `rich-comment-hotload` | Rich comment with add-libs for hotload library dependency |
-| `deftest`              | clojure.test `deftest` function with assertion grouping   |
-| `testing`              | clojure.test `testing` function for assertion grouping    |
+
+### Docs / comments
+* `comment-heading` - describe purpose of the namespace
+* `comment-separator` - logically separate code sections, helps identify opportunities to refactor to other name spaces
+
+### Repl Driven Development
+* `rich-comment` - comment block
+* `rich-comment-rdd` - comment block with ignore :redefined-var for repl experiments
+* `rich-comment-hotload` - comment block with add-libs code for hotloading libraries in Clojure CLI repl
+
+### Standard library functions
+* `def` - def with docstring
+* `def-` - private def with docstring
+* `defn` - defn with docstring
+* `defn-` private defn with docstring
+* `ns` - namespace form with docstring
+
+### Clojure CLI deps.edn aliases
+* `deps-alias` - add Clojure CLI alias
+* `deps-maven` - add a maven style dependency
+* `deps-git` - add a git style dependency using `:git/sha`
+* `deps-git-tag` - as above including `:git/tag`
+* `deps-git-url` - add git style dependency using git url (url taken from dependency name as it is typed - mirrored placeholder)
+* `deps-local` - add a `:local/root` dependency
+
+### Requiring dependencies
+* `require-rdd` - add a require expression, for adding a require in a rich comment block for RDD
+* `require` - simple require
+* `require-refer` - require with `:refer`
+* `require-as` - require with `:as` alias
+* `use` - creates a require rather than the more troublesome use
+
+### Unit testing
+* `deftest` - creates a deftest with testing directive and one assertion
