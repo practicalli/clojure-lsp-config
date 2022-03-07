@@ -80,6 +80,33 @@
     {:extra-paths [\"${2:path}\"]
      :extra-deps {${3:deps-maven or deps-git}}}$0"}
 
+  {:name "deps-alias-main"
+   :detail "deps.edn alias with extra path & deps"
+   :snippet
+   ":${1:category/name}
+    {:extra-paths [\"${2:path}\"]
+     :extra-deps {${3:deps-maven or deps-git}}
+     :main-opts [\"-m\" \"${4:main namespace}\"]}$0"}
+
+  {:name "deps-alias-exec"
+   :detail "deps.edn alias with extra path & deps"
+   :snippet
+   ":${1:category/name}
+    {:extra-paths [\"${2:path}\"]
+     :extra-deps {${3:deps-maven or deps-git}}
+     :exec-fn ${4:domain/function-name}
+     :exec-args {${5:key value}}}$0"}
+
+  {:name "deps-alias-main-exec"
+   :detail "deps.edn alias with extra path & deps"
+   :snippet
+   ":${1:category/name}
+    {:extra-paths [\"${2:path}\"]
+     :extra-deps {${3:deps-maven or deps-git}}
+     :main-opts [\"-m\" \"${4:main namespace}\"]
+     :exec-fn ${4:domain/function-name}
+     :exec-args {${5:key value}}}$0"}
+
   {:name "deps-maven"
    :detail "deps.edn Maven dependency"
    :snippet
