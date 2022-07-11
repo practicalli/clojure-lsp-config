@@ -1,0 +1,188 @@
+;; --------------------------------------------------
+;; cljfmt.edn
+;; Code format configuration
+;; with example indent patterns from community projects
+;; --------------------------------------------------
+
+
+{;; Clojure format
+ ;; https://github.com/weavejester/cljfmt
+
+ :cljfmt
+ {;; correct indentation - see cljfm indents
+  :indentation?                          true
+
+  ;; remove whitespace surrounding inner forms
+  :remove-surrounding-whitespace?        true
+
+  ;; remove trailing whitespace in lines
+  :remove-trailing-whitespace?           true
+
+  ;; insert whitespace missing from between elements
+  :insert-missing-whitespace?            true
+
+  ;; Delete more than one consecutive blank line - annoying
+  :remove-consecutive-blank-lines?       false
+
+  ;; Remove spaces not used for indentation
+  :remove-multiple-non-indenting-spaces? true
+
+  ;; break hashmaps onto multiple lines
+  :split-keypairs-over-multiple-lines?   true
+
+  ;; Use #re for regex indents configuration
+  ;; :cljfmt {:indents {#re ".*" ns [[:inner 0] [:inner 1]]}}
+  :indents {}}}
+
+;; --------------------------------------------------
+;; Example Indent rules - to review
+
+;; From https://github.com/weavejester/cljfmt
+
+;; Clojure.core
+
+#_
+{alt!            [[:block 0]]
+ alt!!           [[:block 0]]
+ are             [[:block 2]]
+ as->            [[:block 2]]
+ binding         [[:block 1]]
+ bound-fn        [[:inner 0]]
+ case            [[:block 1]]
+ catch           [[:block 2]]
+ comment         [[:block 0]]
+ cond            [[:block 0]]
+ condp           [[:block 2]]
+ cond->          [[:block 1]]
+ cond->>         [[:block 1]]
+ def             [[:inner 0]]
+ defmacro        [[:inner 0]]
+ defmethod       [[:inner 0]]
+ defmulti        [[:inner 0]]
+ defn            [[:inner 0]]
+ defn-           [[:inner 0]]
+ defonce         [[:inner 0]]
+ defprotocol     [[:block 1] [:inner 1]]
+ defrecord       [[:block 2] [:inner 1]]
+ defstruct       [[:block 1]]
+ deftest         [[:inner 0]]
+ deftype         [[:block 2] [:inner 1]]
+ do              [[:block 0]]
+ doseq           [[:block 1]]
+ dotimes         [[:block 1]]
+ doto            [[:block 1]]
+ extend          [[:block 1]]
+ extend-protocol [[:block 1] [:inner 1]]
+ extend-type     [[:block 1] [:inner 1]]
+ fdef            [[:inner 0]]
+ finally         [[:block 0]]
+ fn              [[:inner 0]]
+ for             [[:block 1]]
+ future          [[:block 0]]
+ go              [[:block 0]]
+ go-loop         [[:block 1]]
+ if              [[:block 1]]
+ if-let          [[:block 1]]
+ if-not          [[:block 1]]
+ if-some         [[:block 1]]
+ let             [[:block 1]]
+ letfn           [[:block 1] [:inner 2 0]]
+ locking         [[:block 1]]
+ loop            [[:block 1]]
+ match           [[:block 1]]
+ ns              [[:block 1]]
+ proxy           [[:block 2] [:inner 1]]
+ reify           [[:inner 0] [:inner 1]]
+ struct-map      [[:block 1]]
+ testing         [[:block 1]]
+ thread          [[:block 0]]
+ try             [[:block 0]]
+ use-fixtures    [[:inner 0]]
+ when            [[:block 1]]
+ when-first      [[:block 1]]
+ when-let        [[:block 1]]
+ when-not        [[:block 1]]
+ when-some       [[:block 1]]
+ while           [[:block 1]]
+ with-local-vars [[:block 1]]
+ with-open       [[:block 1]]
+ with-out-str    [[:block 0]]
+ with-precision  [[:block 1]]
+ with-redefs     [[:block 1]]}
+
+;; Compojure
+
+#_
+{ANY        [[:inner 0]]
+ DELETE     [[:inner 0]]
+ GET        [[:inner 0]]
+ HEAD       [[:inner 0]]
+ OPTIONS    [[:inner 0]]
+ PATCH      [[:inner 0]]
+ POST       [[:inner 0]]
+ PUT        [[:inner 0]]
+ context    [[:inner 0]]
+ defroutes  [[:inner 0]]
+ let-routes [[:block 1]]
+ rfn        [[:inner 0]]}
+
+;; fuzzy
+#_
+{#"^def(?!ault)(?!late)(?!er)" [[:inner 0]]
+ #"^with-"                     [[:inner 0]]}
+
+
+;; From Clojure LSP maintainer
+
+#_
+{against-background      [[:inner 0]]
+ as-admin                [[:block 1]]
+ as-customer             [[:block 1]]
+ as-customer-with-lift   [[:block 1]]
+ as-delegate             [[:block 2]]
+ as-delegate-with-lift   [[:block 2]]
+ as-of                   [[:block 1]]
+ assoc                   [[:block 1]]
+ assoc-if                [[:block 1]]
+ assoc-in-if             [[:block 1]]
+ assoc-some              [[:block 1]]
+ assoc-in-some           [[:block 1]]
+ constraint-fn           [[:block 2]]
+ consume!                [[:block 0]]
+ data-fn                 [[:block 1]]
+ defhandler              [[:block 2]]
+ defint                  [[:block 0]]
+ defuf                   [[:block 1]]
+ embeds                  [[:block 0]]
+ expand-routes           [[:inner 1]]
+ fact                    [[:block 1]]
+ facts                   [[:block 1]]
+ flow                    [[:block 1]]
+ flow-with-defaults      [[:block 1]]
+ flow-as-of              [[:block 1]]
+ flow-without-validation [[:block 1]]
+ for-all                 [[:block 1]]
+ future-fact             [[:block 1]]
+ future-facts            [[:block 1]]
+ idempotent-start        [[:block 1]]
+ idempotent-stop         [[:block 1]]
+ ignore-conflict         [[:inner 0]]
+ let-entities            [[:block 2]]
+ let-flow                [[:block 1]]
+ log-messages            [[:block 0]]
+ logged-call             [[:block 1]]
+ non-test-action         [[:inner 0]]
+ profile                 [[:block 2]]
+ profiled                [[:block 1]]
+ provided                [[:inner 0]]
+ quick-check             [[:block 1]]
+ rethrow                 [[:block 1]]
+ run-recipe              [[:inner 0]]
+ some-with-open          [[:block 1]]
+ system-map              [[:block 0]]
+ tabular                 [[:inner 0]]
+ try-type                [[:block 0]]
+ with-cid                [[:block 1]]
+ with-fn-validation      [[:block 0]]
+ with-responses          [[:block 0]]
+ with-scopes             [[:block 1]]}
