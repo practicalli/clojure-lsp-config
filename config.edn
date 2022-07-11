@@ -180,4 +180,9 @@
    :detail "testing asserting group for clojure.test"
    :snippet "(testing \"${1:description-of-assertion-group}\"\n $0)"}
 
-  #_()]}
+  {:name "is"
+   :detail "assertion for clojure.test"
+   :snippet "(is (= ${1:function call} ${2:expected result}))$0"}]
+
+ ;; End of LSP snippets
+ ;; --------------------------------------------------

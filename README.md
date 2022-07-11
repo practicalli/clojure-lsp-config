@@ -46,3 +46,5 @@ Clone the repository to the user level configuration location for Clojure LSP, e
 
 ### Unit testing
 * `deftest` - creates a deftest with testing directive and one assertion
+* `testing` - creates a testing testing directive and one assertion
+* `is` - an assertion with placeholders for test function and expected results
