@@ -138,6 +138,10 @@
    ";; --------------------------------------------------\n;; ${1:Section title}\n\n$0\n\n
     ;; End of $1\n;; --------------------------------------------------\n\n"}
 
+  {:name "wrap-reader-comment"
+   :detail "Wrap current expression with Comment Reader macro"
+   :snippet "#_$current-form"}
+
   {:name "rich-comment"
    :detail "Create rich comment"
    :snippet

@@ -16,6 +16,7 @@ Clone the repository to the user level configuration location for Clojure LSP, e
 * `comment-heading` - describe purpose of the namespace
 * `comment-separator` - logically separate code sections, helps identify opportunities to refactor to other name spaces
 * `comment-section` - logically separate large code sections with start and end line comments
+* `wrap-reader-comment` - insert reader comment macro, `#_` before current form, informing Clojure reader to ignore next form
 
 ### Repl Driven Development
 * `rich-comment` - comment block
