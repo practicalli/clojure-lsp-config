@@ -7,6 +7,52 @@ Custom snippets in Clojure LSP format (EDN).  Practicalli designed snippets to e
 Clone the repository to the user level configuration location for Clojure LSP, either `$XDG_CONFIG_HOME/clojure-lsp` or if `XDG_CONFIG_HOME` is not set, `$HOME/.config/clojure-lsp`
 
 
+## Clojure LSP configuration
+
+Include `:extra-paths` and `:extra-deps` from project & user level aliases in LSP classpath.  e.g. support a custom `user` namespace in `dev/user.clj`
+
+```clojure
+ :source-aliases #{:dev :test :env/dev :env/test :lib/reloaded}
+```
+
+Include Java Sources installed via Debian / Ubuntu package `openjdk-17-source` to support calls to Java Objects and Methods.
+
+```clojure
+ :java
+ {:jdk-source-uri       "file:///usr/lib/jvm/openjdk-17/lib/src.zip" ;;
+  :home-path            nil ;; jdk-source-uri takes precedence
+  :download-jdk-source? false}
+```
+
+Clean namespace `ns` forms but do not sort require names
+
+```clojure
+ :clean {:automatically-after-ns-refactor true
+         :ns-inner-blocks-indentation     :next-line
+         :ns-import-classes-indentation   :next-line
+         :sort {:ns      false
+                :require false
+                :import  false
+                :import-classes {:classes-per-line 3} ;; -1 for all in single line
+                :refer {:max-line-length 80}}}
+```
+
+
+Use `^private` metadata for private function definitions rather than `defn-`
+
+```clojure
+ :use-metadata-for-privacy? true
+```
+
+Location of [cljfmt configuration](cljfmt.edn) for formatting, path relative to project root.  The defaults for cljfmt are used, except `:remove-consecutive-blank-lines?` which is set to false to enable more readable code.
+
+```clojure
+ :cljfmt-config-path "cljfmt.edn"
+```
+
+> [cljfmt configuration](cljfmt.edn) included example `:indents` rules for clojure.core, compojure, fuzzy rules and examples used by the Clojure LSP maintainer.
+
+
 ## Custom snippets
 
 [Snippets created by Practicalli](https://practical.li/spacemacs/snippets/clojure-lsp/practicalli-snippets.html) are documents in [Practicalli Spacemacs](https://practical.li/spacemacs/snippets/clojure-lsp/practicalli-snippets.html)
