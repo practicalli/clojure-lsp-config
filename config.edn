@@ -164,6 +164,14 @@
       $0
     #_()) ; End of rich comment block"}
 
+  {:name "wrap-rich-comment"
+   :detail "Wrap current expression with rich comment form"
+   :snippet
+   "(comment
+      $current-form
+      $0
+   #_()) ;; End of rich comment"}
+
   ;; Core functions
   {:name "def"
    :detail "def with docstring"

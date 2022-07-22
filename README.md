@@ -21,6 +21,7 @@ Clone the repository to the user level configuration location for Clojure LSP, e
 * `rich-comment` - comment block
 * `rich-comment-rdd` - comment block with ignore :redefined-var for repl experiments
 * `rich-comment-hotload` - comment block with add-libs code for hotloading libraries in Clojure CLI repl
+* `wrap-rich-comment` - wrap current form with comment reader macro
 
 ### Standard library functions
 * `def` - def with docstring
