@@ -11,7 +11,6 @@ Clone the repository to the user level configuration location for Clojure LSP, e
 
 [Snippets created by Practicalli](https://practical.li/spacemacs/snippets/clojure-lsp/practicalli-snippets.html) are documents in [Practicalli Spacemacs](https://practical.li/spacemacs/snippets/clojure-lsp/practicalli-snippets.html)
 
-
 ### Docs / comments
 * `comment-heading` - describe purpose of the namespace
 * `comment-separator` - logically separate code sections, helps identify opportunities to refactor to other name spaces
@@ -23,6 +22,7 @@ Clone the repository to the user level configuration location for Clojure LSP, e
 * `rich-comment-rdd` - comment block with ignore :redefined-var for repl experiments
 * `rich-comment-hotload` - comment block with add-libs code for hotloading libraries in Clojure CLI repl
 * `wrap-rich-comment` - wrap current form with comment reader macro
+* `require-rdd` - add a require expression, for adding a require in a rich comment block for RDD
 
 ### Standard library functions
 * `def` - def with docstring
