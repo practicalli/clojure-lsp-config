@@ -303,8 +303,20 @@
 
   {:name "is"
    :detail "assertion for clojure.test"
-   :snippet "(is (= ${1:function call} ${2:expected result}))$0"}]
+   :snippet "(is (= ${1:function call} ${2:expected result}))$0"}
 
+  ;; ---------------------------------------------------------
+  ;; Clojure LSP and Clj-kondo snippets
+
+  {:name "lsp-ignore-redefined"
+   :detail "Ignore redefined Vars"
+   :snippet
+   "#_{:clj-kondo/ignore [:redefined-var]}
+    $0"}
+
+  ;; End of Clojure LSP and Clj-kondo snippets
+  ;; ---------------------------------------------------------
+  ]
  ;; End of LSP snippets
  ;; --------------------------------------------------
 
