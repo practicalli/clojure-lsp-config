@@ -124,21 +124,21 @@
   {:name "comment-heading"
    :detail "Comment Header"
    :snippet
-   ";; --------------------------------------------------
+   ";; ---------------------------------------------------------
     ;; ${1:Heading summary title}
     ;;
-    ;; ${2:Brief description}\n;; --------------------------------------------------\n\n$0"}
+    ;; ${2:Brief description}\n;; ---------------------------------------------------------\n\n$0"}
 
   {:name "comment-separator"
    :detail "Comment Separator"
    :snippet
-   ";; --------------------------------------------------\n;; ${1:Section title}\n\n$0"}
+   ";; ---------------------------------------------------------\n;; ${1:Section title}\n\n$0"}
 
   {:name "comment-section"
    :detail "Comment Section"
    :snippet
-   ";; --------------------------------------------------\n;; ${1:Section title}\n\n$0\n\n
-    ;; End of $1\n;; --------------------------------------------------\n\n"}
+   ";; ---------------------------------------------------------\n;; ${1:Section title}\n\n$0\n\n
+    ;; End of $1\n;; ---------------------------------------------------------\n\n"}
 
   {:name "wrap-reader-comment"
    :detail "Wrap current expression with Comment Reader macro"
