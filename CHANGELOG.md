@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. This change
 
 ### Changed
 - complete rewrite of configuration, comments added where default values were not changed
+- Clojure Lint GitHub action (with reviewdog), replacing setup-lsp-kondo (outdated)
 
 ### Resolve
 - #1 - Clojure docstrings not showing in Emacs with Clojure-LSP
