@@ -13,11 +13,11 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: DeLaGuardo/setup-clj-kondo@master
         with:
-          version: '2021.12.16'
+          version: '2023.03.17'
 
       - uses: actions/checkout@v3
 
