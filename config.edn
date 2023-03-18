@@ -181,7 +181,7 @@
 
  ;; Locally defined snippets
  :additional-snippets
- {[;; Documentation / comments
+ [;; Documentation / comments
 
    {:name "comment-heading"
     :detail "Comment Header"
@@ -381,4 +381,4 @@
    ]
   ;; End of LSP snippets
   ;; ---------------------------------------------------------
-  }}
+  }
