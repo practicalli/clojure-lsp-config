@@ -1,0 +1,24 @@
+---
+name: Lint Clojure
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'config.edn'
+  push:
+    paths:
+      - 'config.edn'
+    branches:
+      - main
+
+jobs:
+  clj-kondo:
+    name: runner / clj-kondo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.0.2
+      - name: clj-kondo
+        uses: nnichols/clojure-lint-action@v2
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
