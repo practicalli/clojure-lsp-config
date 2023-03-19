@@ -39,8 +39,7 @@
  ;; :compute-external-file-changes true
 
  ;; Approach for linking dependencies
- ;; :dependency-scheme :zip  !! wrong configuration
- :dependency-scheme "zipfile"
+ ;; :dependency-scheme "zipfile"
 
  ;; generate and analyze stubs for specific namespaces on the project classpath
  ;; typically for closed source dependencies, e.g. datomic.api
