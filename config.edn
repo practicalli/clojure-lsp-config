@@ -63,7 +63,7 @@
  ;; End of Project analysis
  ;; ---------------------------------------------------------
 
-;; ---------------------------------------------------------
+ ;; ---------------------------------------------------------
  ;; Linter configuration
 
  ;; clj-kondo Linter rules
@@ -179,52 +179,51 @@
  ;; LSP snippets
  ;; https://clojure-lsp.io/features/#snippets
 
- ;; Locally defined snippets
  :additional-snippets
  [;; Documentation / comments
 
-   {:name "comment-heading"
-    :detail "Comment Header"
-    :snippet
-    ";; ---------------------------------------------------------
+  {:name "comment-heading"
+   :detail "Comment Header"
+   :snippet
+   ";; ---------------------------------------------------------
     ;; ${1:Heading summary title}
     ;;
     ;; ${2:Brief description}\n;; ---------------------------------------------------------\n\n$0"}
 
-   {:name "comment-separator"
-    :detail "Comment Separator"
-    :snippet
-    ";; ---------------------------------------------------------\n;; ${1:Section title}\n\n$0"}
+  {:name "comment-separator"
+   :detail "Comment Separator"
+   :snippet
+   ";; ---------------------------------------------------------\n;; ${1:Section title}\n\n$0"}
 
-   {:name "comment-section"
-    :detail "Comment Section"
-    :snippet
-    ";; ---------------------------------------------------------\n;; ${1:Section title}\n\n$0\n\n
+  {:name "comment-section"
+   :detail "Comment Section"
+   :snippet
+   ";; ---------------------------------------------------------\n;; ${1:Section title}\n\n$0\n\n
     ;; End of $1\n;; ---------------------------------------------------------\n\n"}
 
-   {:name "wrap-reader-comment"
-    :detail "Wrap current expression with Comment Reader macro"
-    :snippet "#_$current-form"}
+  {:name "wrap-reader-comment"
+   :detail "Wrap current expression with Comment Reader macro"
+   :snippet "#_$current-form"}
 
-   {:name "rich-comment"
-    :detail "Create rich comment"
-    :snippet
-    "(comment
+  {:name "rich-comment"
+   :detail "Create rich comment"
+   :snippet
+   "(comment
       $0
   #_()) ;; End of rich comment"}
 
-   {:name "rich-comment-rdd"
-    :detail "Create comment block"
-    :snippet
-    "#_{:clj-kondo/ignore [:redefined-var]}
+  {:name "rich-comment-rdd"
+   :detail "Create comment block"
+   :snippet
+   "#_{:clj-kondo/ignore [:redefined-var]}
    (comment
      $0
    #_()) ; End of rich comment"}
 
-   {:name "rich-comment-hotload"
-    :detail "Rich comment library hotload"
-    :snippet
-    "#_{:clj-kondo/ignore [:redefined-var]}
+  {:name "rich-comment-hotload"
+   :detail "Rich comment library hotload"
+   :snippet
+   "#_{:clj-kondo/ignore [:redefined-var]}
     (comment
       ;; Add-lib library for hot-loading
       (require '[clojure.tools.deps.alpha.repl :refer [add-libs]])
@@ -232,153 +231,154 @@
       $0
     #_()) ; End of rich comment block"}
 
-   {:name "wrap-rich-comment"
-    :detail "Wrap current expression with rich comment form"
-    :snippet
-    "(comment
+  {:name "wrap-rich-comment"
+   :detail "Wrap current expression with rich comment form"
+   :snippet
+   "(comment
       $current-form
       $0
    #_()) ;; End of rich comment"}
 
   ;; Core functions
 
-   {:name "def"
-    :detail "def with docstring"
-    :snippet "(def ${1:name}\n  \"${2:doc-string}\"\n  $0)"}
+  {:name "def"
+   :detail "def with docstring"
+   :snippet "(def ${1:name}\n  \"${2:doc-string}\"\n  $0)"}
 
-   {:name "def-"
-    :detail "def private"
-    :snippet "(def ^:private ${1:name}\n  \"${2:doc-string}\"\n $0)"}
+  {:name "def-"
+   :detail "def private"
+   :snippet "(def ^:private ${1:name}\n  \"${2:doc-string}\"\n $0)"}
 
-   {:name "defn"
-    :detail "Create public function"
-    :snippet "(defn ${1:name}\n  \"${2:doc-string}\"\n   [${3:args}]\n  $0)"}
+  {:name "defn"
+   :detail "Create public function"
+   :snippet "(defn ${1:name}\n  \"${2:doc-string}\"\n   [${3:args}]\n  $0)"}
 
-   {:name "defn-"
-    :detail "Create public function"
-    :snippet "(defn ^:private ${1:name}\n  \"${2:docstring}\"\n   [${3:args}]\n  $0)"}
+  {:name "defn-"
+   :detail "Create public function"
+   :snippet "(defn ^:private ${1:name}\n  \"${2:docstring}\"\n   [${3:args}]\n  $0)"}
 
-   {:name "ns"
-    :detail "Create ns"
-    :snippet "(ns ${1:name}\n  \"${2:doc-string}\"\n  ${3:require})"}
+  {:name "ns"
+   :detail "Create ns"
+   :snippet "(ns ${1:name}\n  \"${2:doc-string}\"\n  ${3:require})"}
 
   ;; Clojure CLI alias snippets
 
-   {:name "deps-alias"
-    :detail "deps.edn alias with extra path & deps"
-    :snippet
-    ":${1:category/name}
+  {:name "deps-alias"
+   :detail "deps.edn alias with extra path & deps"
+   :snippet
+   ":${1:category/name}
     {:extra-paths [\"${2:path}\"]
      :extra-deps {${3:deps-maven or deps-git}}}$0"}
 
-   {:name "deps-alias-main"
-    :detail "deps.edn alias with extra path & deps"
-    :snippet
-    ":${1:category/name}
+  {:name "deps-alias-main"
+   :detail "deps.edn alias with extra path & deps"
+   :snippet
+   ":${1:category/name}
     {:extra-paths [\"${2:path}\"]
      :extra-deps {${3:deps-maven or deps-git}}
      :main-opts [\"-m\" \"${4:main namespace}\"]}$0"}
 
-   {:name "deps-alias-exec"
-    :detail "deps.edn alias with extra path & deps"
-    :snippet
-    ":${1:category/name}
+  {:name "deps-alias-exec"
+   :detail "deps.edn alias with extra path & deps"
+   :snippet
+   ":${1:category/name}
     {:extra-paths [\"${2:path}\"]
      :extra-deps {${3:deps-maven or deps-git}}
      :exec-fn ${4:domain/function-name}
      :exec-args {${5:key value}}}$0"}
 
-   {:name "deps-alias-main-exec"
-    :detail "deps.edn alias with extra path & deps"
-    :snippet
-    ":${1:category/name}
+  {:name "deps-alias-main-exec"
+   :detail "deps.edn alias with extra path & deps"
+   :snippet
+   ":${1:category/name}
     {:extra-paths [\"${2:path}\"]
      :extra-deps {${3:deps-maven or deps-git}}
      :main-opts [\"-m\" \"${4:main namespace}\"]
      :exec-fn ${4:domain/function-name}
      :exec-args {${5:key value}}}$0"}
 
-   {:name "deps-maven"
-    :detail "deps.edn Maven dependency"
-    :snippet
-    "${1:domain/library-name} {:mvn/version \"${2:1.0.0}\"}$0"}
+  {:name "deps-maven"
+   :detail "deps.edn Maven dependency"
+   :snippet
+   "${1:domain/library-name} {:mvn/version \"${2:1.0.0}\"}$0"}
 
-   {:name "deps-git"
-    :detail "deps.edn Git dependency"
-    :snippet
-    "${1:domain/library-name}
+  {:name "deps-git"
+   :detail "deps.edn Git dependency"
+   :snippet
+   "${1:domain/library-name}
        {:git/sha \"${2:git-sha-value}\"}$0"}
 
-   {:name "deps-git-tag"
-    :detail "Git dependency"
-    :snippet
-    "${1:domain/library-name}
+  {:name "deps-git-tag"
+   :detail "Git dependency"
+   :snippet
+   "${1:domain/library-name}
       {:git/tag \"${2:git-tag-value}\"
        :git/sha \"${3:git-sha-value}\"}$0"}
 
-   {:name "deps-git-url"
-    :detail "Git URL dependency"
-    :snippet
-    "${1:domain/library-name}
+  {:name "deps-git-url"
+   :detail "Git URL dependency"
+   :snippet
+   "${1:domain/library-name}
       {:git/url \"https://github.com/$1\"
        :git/sha \"${2:git-sha-value}\"}$0"}
 
-   {:name "deps-local"
-    :detail "deps.edn Maven dependency"
-    :snippet
-    "${1:domain/library-name} {:local/root \"${2:/path/to/project/root}\"}$0"}
+  {:name "deps-local"
+   :detail "deps.edn Maven dependency"
+   :snippet
+   "${1:domain/library-name} {:local/root \"${2:/path/to/project/root}\"}$0"}
 
    ;; Requiring dependency snippets
 
-   {:name "require-rdd"
-    :detail "require for rich comment experiments"
-    :snippet "(require '[${1:namespace} :as ${2:alias}]$3)$0"}
+  {:name "require-rdd"
+   :detail "require for rich comment experiments"
+   :snippet "(require '[${1:namespace} :as ${2:alias}]$3)$0"}
 
-   {:name "require"
-    :detail "ns require"
-    :snippet "(:require [${1:namespace}])$0"}
+  {:name "require"
+   :detail "ns require"
+   :snippet "(:require [${1:namespace}])$0"}
 
-   {:name "require-refer"
-    :detail "ns require with :refer"
-    :snippet "(:require [${1:namespace} :refer [$2]]$3)$0"}
+  {:name "require-refer"
+   :detail "ns require with :refer"
+   :snippet "(:require [${1:namespace} :refer [$2]]$3)$0"}
 
-   {:name "require-as"
-    :detail "ns require with :as alias"
-    :snippet "(:require [${1:namespace} :as ${2:alias}]$3)$0"}
+  {:name "require-as"
+   :detail "ns require with :as alias"
+   :snippet "(:require [${1:namespace} :as ${2:alias}]$3)$0"}
 
-   {:name "use"
-    :detail "require refer preferred over use"
-    :snippet "(:require [${1:namespace} :refer [$2]])$0"}
+  {:name "use"
+   :detail "require refer preferred over use"
+   :snippet "(:require [${1:namespace} :refer [$2]])$0"}
 
    ;; Unit Test snippets
 
-   {:name "deftest"
-    :detail "deftest clojure.test"
-    :snippet
-    "(deftest ${1:name}-test
+  {:name "deftest"
+   :detail "deftest clojure.test"
+   :snippet
+   "(deftest ${1:name}-test
             (testing \"${2:Context of the test assertions}\"
             (is (= ${3:assertion-values}))$4)) $0"}
 
-   {:name "testing"
-    :detail "testing asserting group for clojure.test"
-    :snippet "(testing \"${1:description-of-assertion-group}\"\n $0)"}
+  {:name "testing"
+   :detail "testing asserting group for clojure.test"
+   :snippet "(testing \"${1:description-of-assertion-group}\"\n $0)"}
 
-   {:name "is"
-    :detail "assertion for clojure.test"
-    :snippet "(is (= ${1:function call} ${2:expected result}))$0"}
+  {:name "is"
+   :detail "assertion for clojure.test"
+   :snippet "(is (= ${1:function call} ${2:expected result}))$0"}
 
    ;; ---------------------------------------------------------
    ;; Clojure LSP and Clj-kondo snippets
 
-   {:name "lsp-ignore-redefined"
-    :detail "Ignore redefined Vars"
-    :snippet
-    "#_{:clj-kondo/ignore [:redefined-var]}
+  {:name "lsp-ignore-redefined"
+   :detail "Ignore redefined Vars"
+   :snippet
+   "#_{:clj-kondo/ignore [:redefined-var]}
             $0"}
 
    ;; End of Clojure LSP and Clj-kondo snippets
    ;; ---------------------------------------------------------
-   ]
+  ]
   ;; End of LSP snippets
   ;; ---------------------------------------------------------
-  }
+ 
+ }
