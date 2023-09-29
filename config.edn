@@ -56,8 +56,9 @@
  ;;  :home-path nil ;; jdk-source-uri takes precedence
  ;;  :download-jdk-source? false
  ;;  :decompile-jar-as-project? true}
- :java
- {:jdk-source-uri "file:///usr/lib/jvm/openjdk-17/lib/src.zip"}
+ ;; :java
+ ;; {:jdk-source-uri "file:///usr/lib/jvm/openjdk-17/lib/src.zip"}
+ :java nil
 
  ;; End of Project analysis
  ;; ---------------------------------------------------------
