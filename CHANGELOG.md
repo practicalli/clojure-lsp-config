@@ -3,8 +3,9 @@ All notable changes to this project will be documented in this file. This change
 
 ## [Unreleased]
 ### Changed
+- config: update source-aliases to use :dev/env user alias
 
-## [0.1.1] - 2023-03-18
+## 2023-03-18
 ## Added
 - changelog as a record of major changes
 

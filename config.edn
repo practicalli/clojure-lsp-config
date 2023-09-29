@@ -17,7 +17,7 @@
 
  ;; Include :extra-paths and :extra-deps from project & user level aliases in LSP classpath
  ;;  :source-aliases #{:dev :test}
- :source-aliases #{:dev :test :env/dev :dev/reloaded}
+ :source-aliases #{:dev :test :dev/env :dev/reloaded}
 
  ;; Define a custom project classpath command, e.g. Clojure CLI
  ;; :project-specs [{:project-path "deps.edn"
