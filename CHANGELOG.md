@@ -2,8 +2,12 @@
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
 ## [Unreleased]
+
+## 2023-09-29
 ### Changed
 - config: update source-aliases to use :dev/env user alias
+- config: refine paths ignore regex with build & console-log patterns
+- config: disable Java analysis, use significantly less resources
 
 ## 2023-03-18
 ## Added
