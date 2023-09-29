@@ -25,8 +25,8 @@
  ;; Check the default at clojure-lsp.classpath/default-project-specs
  ;; :project-specs []
 
- ;; ingnore paths in project, i.e. build assets
- ;; :source-paths-ignore-regex ["target.*"]
+ ;; ignore analyzing/linting specific paths
+ :source-paths-ignore-regex ["target.*" "build.*" "console-log-.*"]
 
  ;; Additional LSP configurations to load from classpath
  ;; https://clojure-lsp.io/settings/#classpath-config-paths
