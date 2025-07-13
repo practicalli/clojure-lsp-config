@@ -294,8 +294,8 @@
     {:extra-paths [\"${2:path}\"]
      :extra-deps {${3:deps-maven or deps-git}}
      :main-opts [\"-m\" \"${4:main namespace}\"]
-     :exec-fn ${4:domain/function-name}
-     :exec-args {${5:key value}}}$0"}
+     :exec-fn ${5:domain/function-name}
+     :exec-args {${6:key value}}}$0"}
 
   {:name "deps-maven"
    :detail "deps.edn Maven dependency"
@@ -373,12 +373,10 @@
    :detail "Ignore redefined Vars"
    :snippet
    "#_{:clj-kondo/ignore [:redefined-var]}
-            $0"}
+            $0"}]}
 
    ;; End of Clojure LSP and Clj-kondo snippets
    ;; ---------------------------------------------------------
-  ]
+
   ;; End of LSP snippets
   ;; ---------------------------------------------------------
- 
- }
